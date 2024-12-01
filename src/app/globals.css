@@ -1,74 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-  /* Colors */
-  --white: #ffffff;
-  --black: #171717;
-  --blue: #1F5DFD;
-  --green: #9BFD1F;
-  --dark-grey: #9090A6;
-  --light-grey: #E7E7E9;
-  --stroke-color: #D1D1DE;
+    /* Colors */
+    --white: #ffffff;
+    --black: #171717;
+    --blue: #1F5DFD;
+    --green: #9BFD1F;
+    --dark-grey: #9090A6;
+    --light-grey: #E7E7E9;
+    --stroke-color: #D1D1DE;
 
-  /* Screens */
-  --desktop-width: 1920px;
-  --tablet-width: 1024px;
-  --mobile-width: 768px;
+    /* Screens */
+    --desktop-width: 1920px;
+    --tablet-width: 1024px;
+    --mobile-width: 768px;
+
+    /* Font */
+    --unbounded-font: 'Unbounded';
 }
 
 /* Colors */
 :root {
-  /* Font size for Desktop */
-  --headline-font-size: 86px;
-  --headline2-font-size: 50px;
-  --headline3-font-size: 30px;
-  --numeric-font-size: 50px;
-  --descriptor-font-size: 20px;
-  --large-text-font-size: 16px;
-  --price-font-size: 25px;
-  --basic-font-size: 14px;
-  --button-font-size: 14px;
+    /* Font size for Desktop */
+    --headline-font-size: 86px;
+    --headline2-font-size: 50px;
+    --headline3-font-size: 30px;
+    --numeric-font-size: 50px;
+    --descriptor-font-size: 20px;
+    --large-text-font-size: 16px;
+    --price-font-size: 25px;
+    --basic-font-size: 14px;
+    --button-font-size: 14px;
 
-  /* Line height for Desktop */
-  --line-height-small: 100%;
-  --line-height-normal: 130%;
-  --line-height-medium: 150%;
-  --line-height-large: 150%;
+    /* Line height for Desktop */
+    --line-height-small: 100%;
+    --line-height-normal: 130%;
+    --line-height-medium: 150%;
+    --line-height-large: 150%;
 }
 
 /* Tablet */
 @media (max-width: var(--tablet-width)) {
-  :root {
-    /* Font size for Tablet */
-    --headline-font-size: 50px;
-    --headline2-font-size: 40px;
-    --headline3-font-size: 22px;
-    --numeric-font-size: 30px;
-    --descriptor-font-size: 18px;
-    --large-text-font-size: 15px;
-    --price-font-size: 20px;
-    --button-font-size: 12px;
+    :root {
+        /* Font size for Tablet */
+        --headline-font-size: 50px;
+        --headline2-font-size: 40px;
+        --headline3-font-size: 22px;
+        --numeric-font-size: 30px;
+        --descriptor-font-size: 18px;
+        --large-text-font-size: 15px;
+        --price-font-size: 20px;
+        --button-font-size: 12px;
 
-    /* Line height for Tablet */
-    --line-height-medium: 140%;
-  }
+        /* Line height for Tablet */
+        --line-height-medium: 140%;
+    }
 }
 
 /* Mobile */
 @media (max-width: var(--mobile-width)) {
-  :root {
-    /* Font size for Mobile */
-    --headline-font-size: 30px;
-    --headline2-font-size: 22px;
-    --headline3-font-size: 18px;
-    --numeric-font-size: 26px;
-    --descriptor-font-size: 16px;
-    --large-text-font-size: 14px;
-    --price-font-size: 18px;
+    :root {
+        /* Font size for Mobile */
+        --headline-font-size: 30px;
+        --headline2-font-size: 22px;
+        --headline3-font-size: 18px;
+        --numeric-font-size: 26px;
+        --descriptor-font-size: 16px;
+        --large-text-font-size: 14px;
+        --price-font-size: 18px;
 
-    /* Line height for Mobile */
-    --line-height-medium: 140%;
-  }
+        /* Line height for Mobile */
+        --line-height-medium: 140%;
+    }
 }

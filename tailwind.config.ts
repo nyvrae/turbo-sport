@@ -18,6 +18,9 @@ export default {
         light_grey: "var(--light-grey)",
         stroke_color: "var(--stroke-color)",
       },
+      fontFamily: {
+        unbounded: "var(--unbounded-font)",
+      },
       fontSize: {
         hl1_fs: [
           "var(--headline-font-size)",
