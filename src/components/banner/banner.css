@@ -1,0 +1,122 @@
+.btn_buy_ticket {
+    border-radius: 44px;
+    width: 250px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+
+.banner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper {
+    max-width: 1920px;
+
+    grid-template-columns: repeat(1, 1fr);
+}
+
+@media (min-width: 768px) {
+    .wrapper {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas:
+            "logo logo"
+            "headline headline"
+            "video video"
+            "lower-headings-first lower-headings-first"
+            "lower-headings-last lower-headings-last";
+    }
+
+    .banner__wrapper__image {
+        grid-area: logo;
+    }
+
+    .main_head_and_btn {
+        grid-area: headline;
+    }
+
+    .main_head_and_btn {
+        display: flex;
+    }
+
+    .banner__wrapper__buy-ticket {
+        margin-top: auto;
+        margin-right: 0;
+        margin-left: auto;
+    }
+
+    .video__component {
+        grid-area: video;
+    }
+
+    .lower-headings-first {
+        grid-area: lower-headings-first;
+    }
+
+    .lower-headings-last {
+        grid-area: lower-headings-last;
+    }
+}
+
+.lower-headings-first {
+    width: 100%;
+    margin-top: 40px;
+}
+
+.lower-headings-last {
+    margin-bottom: 40px;
+    margin-left: auto;
+    margin-top: 20px;
+}
+
+@media (min-width: 768px) {
+    .lower-headings-last {
+        width: 50%;
+        justify-self: end;
+        margin-top: 10px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .lower-headings-first {
+        margin-top: 80px;
+    }
+
+    .lower-headings-last {
+        margin-bottom: 80px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .lower-headings-first {
+        margin-top: 120px;
+    }
+
+    .lower-headings-last {
+        margin-bottom: 120px;
+    }
+}
+
+.large_fs {
+    line-height: 150%;
+    font-size: 16px;
+}
+
+@media (max-width: 1024px) {
+    .large_fs {
+        font-size: 15px;
+
+    }
+}
+
+@media (max-width: 768px) {
+    .large_fs {
+        font-size: 14px;
+    }
+}

@@ -1,0 +1,19 @@
+import React from 'react';
+import './video-component.css';
+
+const VideoComponent: React.FC = () => {
+
+    return (
+        <div className="video__container w-full aspect-video">
+            <video
+                className="video w-full h-full"
+                src="/banner_video.mp4"
+                muted
+                autoPlay
+                loop
+            />
+        </div>
+    );
+};
+
+export default VideoComponent;

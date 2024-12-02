@@ -10,13 +10,16 @@ export default {
   theme: {
     extend: {
       colors: {
-        white: "var(--white)",
-        black: "var(--black)",
+        foreground: "var(--foreground)",
+        background: "var(--background)",
         blue: "var(--blue)",
         green: "var(--green)",
         dark_grey: "var(--dark-grey)",
-        light_grey: "var(--light-grey)",
+        white: "var(--white)",
         stroke_color: "var(--stroke-color)",
+      },
+      maxWidth: {
+        '1920': '1920px',
       },
       fontFamily: {
         unbounded: "var(--unbounded-font)",
@@ -46,19 +49,19 @@ export default {
             lineHeight: "var(--line-height-large)",
           }
         ],
-        text_large_fs: [
+        large_fs: [
           "var(--text-large-font-size)",
           {
             lineHeight: "var(--line-height-large)",
           }
         ],
-        text_small_fs: [
+        small_fs: [
           "var(--basic-font-size)",
           {
             lineHeight: "var(--line-height-normal)",
           }
         ],
-        menu_text_fs: [
+        text_fs: [
           "var(--basic-font-size)",
           {
             lineHeight: "var(--line-height-small)",

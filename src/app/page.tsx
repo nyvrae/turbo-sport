@@ -1,4 +1,5 @@
 import Header from '../components/header/Header'
+import Banner from '@/components/banner/Banner'
 import Participants from '../components/participants/Participants'
 import Activities from '../components/activities/Activities'
 import Schedule from '../components/schedule/Schedule'
@@ -8,10 +9,12 @@ import Sponsorship from '../components/sponsorhip/Sponsorship'
 
 import './globals.css'
 
+
 export default function Page() {
     return (
         <section className='page w-full'>
             <Header />
+            <Banner />
             <Participants />
             <Activities />
             <Schedule />
