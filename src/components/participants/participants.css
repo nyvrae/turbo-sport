@@ -9,6 +9,8 @@
 }
 
 /* Адаптив под фотки и текст */
+
+/* До 1024px через FlexBox */
 @media (max-width: 1024px) {
     #mem-cont {
         display: flex;
@@ -17,9 +19,6 @@
         justify-content: space-between;
     }
 
-    .watch-photoes__text {
-        padding: 14px 18px;
-    }
 
     .participants__text {
         flex-basis: 100%;
@@ -33,26 +32,40 @@
         aspect-ratio: 132 / 100;
     }
 
+    .pts-flex--resize {
+        width: 41.25svw;
+        min-width: 130px;
+        aspect-ratio: 132 / 150;
+    }
+
+    .photos {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .photos__left,
+    .photos__right {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
     .watch-photoes {
         position: relative;
-        height: 0;
-        padding-bottom: 75.76%;
+        width: 100%;
+        padding: 14px 18px;
     }
 
     .watch-photoes>p {
-        position: absolute;
         width: 100%;
-        top: 0%;
         display: flex;
         align-items: center;
         justify-content: space-between;
-        gap: 10px;
-    }
-
-    .participants__fifth-photo {
-        order: 2;
     }
 }
+
+/* через GridBox */
 
 @media (min-width: 1024px) {
 
@@ -60,17 +73,6 @@
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
-    .participants__text {
-        grid-column: 1 / 2;
-    }
-
-    .participants__fifth-photo {
-        order: 2;
-    }
-
-    .watch-photoes {
-        order: 1;
-    }
 }
 
 /* Паддинги сверху и снизу */

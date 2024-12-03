@@ -53,65 +53,71 @@ const Participants = () => {
                         в одной из лучших локаций Москвы.
                     </p>
                 </div>
-                <div className='participants__left-photo participants__first-photo'>
-                    <Image
-                        className='participants__photo'
-                        src={PhotoP2}
-                        width={800}
-                        height={600}
-                        alt=''
-                    />
-                </div>
-                <div className="participants__right-photo participants__second-photo">
-                    <Image
-                        className='participants__photo'
-                        src={PhotoP1}
-                        width={800}
-                        height={600}
-                        alt=''
-                    />
-                </div>
-                <div className="participants__left-photo participants__third-photo">
-                    <Image
-                        className='participants__photo'
 
-                        src={PhotoP4}
-                        width={800}
-                        height={600}
-                        alt=''
-                    />
-                </div>
-                <div className='participants__right-photo participants__fourth-photo'>
-                    <Image
-                        className='participants__photo'
+                <div className="photos">
+                    <div className="photos__left">
+                        <div className='participants__left-photo'>
+                            <Image
+                                className='participants__photo pts-flex--resize'
+                                src={PhotoP2}
+                                width={800}
+                                height={600}
+                                alt=''
+                            />
+                        </div>
 
-                        src={PhotoP3}
-                        width={800}
-                        height={600}
-                        alt=''
-                    />
-                </div>
-                <div className="participants__right-photo participants__fifth-photo">
-                    <Image
-                        className='participants__photo'
+                        <div className="participants__left-photo">
+                            <Image
+                                className='participants__photo pts-flex--resize'
+                                src={PhotoP4}
+                                width={800}
+                                height={600}
+                                alt=''
+                            />
+                        </div>
 
-                        src={PhotoP5}
-                        width={800}
-                        height={600}
-                        alt=''
-                    />
-                </div>
-                <div className="watch-photoes bg-blue hover:bg-black cursor-pointer">
-                    <p className='watch-photoes__text flex'>
-                        <span className='text-background text-nowrap text-xs md:text-base xl:text-xl'>
-                            Еще фото
-                        </span>
-                        <span>
-                            <svg className='icon-with-show-photoes' viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M23.9996 2.00015L23.9996 23.9998M23.9996 2.00015L2 23.9998M23.9996 2.00015L2 2.00015" className='stroke-background' strokeWidth="3.6667" />
-                            </svg>
-                        </span>
-                    </p>
+                        <div className="watch-photoes bg-blue hover:bg-black cursor-pointer">
+                            <p className='watch-photoes__text'>
+                                <span className='text-background text-nowrap text-xs md:text-base xl:text-xl'>
+                                    Еще фото
+                                </span>
+                                <span>
+                                    <svg className='icon-with-show-photoes' viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M23.9996 2.00015L23.9996 23.9998M23.9996 2.00015L2 23.9998M23.9996 2.00015L2 2.00015" className='stroke-background' strokeWidth="3.6667" />
+                                    </svg>
+                                </span>
+                            </p>
+                        </div>
+                    </div>
+                    <div className='photos__right'>
+                        <div className="participants__right-photo">
+                            <Image
+                                className='participants__photo'
+                                src={PhotoP1}
+                                width={800}
+                                height={600}
+                                alt=''
+                            />
+                        </div>
+                        <div className='participants__right-photo'>
+                            <Image
+                                className='participants__photo pts-flex--resize'
+                                src={PhotoP3}
+                                width={800}
+                                height={600}
+                                alt=''
+                            />
+                        </div>
+                        <div className="participants__right-photo">
+                            <Image
+                                className='participants__photo'
+                                src={PhotoP5}
+                                width={800}
+                                height={600}
+                                alt=''
+                            />
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
