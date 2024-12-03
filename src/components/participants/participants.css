@@ -1,0 +1,173 @@
+.participants {
+    max-width: 1920px;
+}
+
+.participants__wrapper {
+    max-width: 1920px;
+    padding-top: clamp(30px, 9.375svw, 100px);
+    padding-bottom: clamp(30px, 9.375svw, 100px);
+}
+
+/* Адаптив под фотки и текст */
+@media (max-width: 1024px) {
+    #mem-cont {
+        display: flex;
+        flex-wrap: wrap;
+        row-gap: 20px;
+        justify-content: space-between;
+    }
+
+    .watch-photoes__text {
+        padding: 14px 18px;
+    }
+
+    .participants__text {
+        flex-basis: 100%;
+        margin-bottom: 10px;
+    }
+
+    .participants__photo,
+    .watch-photoes {
+        width: 41.25svw;
+        min-width: 130px;
+        aspect-ratio: 132 / 100;
+    }
+
+    .watch-photoes {
+        position: relative;
+        height: 0;
+        padding-bottom: 75.76%;
+    }
+
+    .watch-photoes>p {
+        position: absolute;
+        width: 100%;
+        top: 0%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+    }
+
+    .participants__fifth-photo {
+        order: 2;
+    }
+}
+
+@media (min-width: 1024px) {
+
+    #mem-cont {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .participants__text {
+        grid-column: 1 / 2;
+    }
+
+    .participants__fifth-photo {
+        order: 2;
+    }
+
+    .watch-photoes {
+        order: 1;
+    }
+}
+
+/* Паддинги сверху и снизу */
+@media (min-width: 1024px) {
+
+    .participants__wrapper {
+        padding-top: clamp(100px, 10svw, 200px);
+        padding-bottom: clamp(100px, 10svw, 200px);
+    }
+}
+
+
+/* Border радиусы для "Еще фото" и для самого контейнера*/
+.watch-photoes,
+.participants,
+.participants__photo {
+    border-radius: 20px;
+}
+
+@media (min-width: 1024px) {
+
+    .watch-photoes,
+    .participants,
+    .participants__photo {
+        border-radius: 40px;
+    }
+}
+
+@media (min-width: 1200px) {
+
+    .participants,
+    .participants__photo {
+        border-radius: 50px;
+    }
+}
+
+
+/* Доп классы */
+.large_fs {
+    line-height: 150%;
+    font-size: 16px;
+}
+
+@media (max-width: 1024px) {
+    .large_fs {
+        font-size: 15px;
+
+    }
+}
+
+@media (max-width: 768px) {
+    .large_fs {
+        font-size: 14px;
+    }
+}
+
+/* Общие стили */
+.pts-badge {
+    width: 50px;
+    height: 50px;
+}
+
+.icon-with-show-photoes {
+    width: 10px;
+    height: 10px;
+}
+
+
+
+@media (min-width: 640px) {
+    .icon-with-show-photoes {
+        width: 14px;
+        height: 14px;
+    }
+}
+
+
+@media (min-width: 1024px) {
+    .pts-badge {
+        width: 60px;
+        height: 60px;
+    }
+
+    .icon-with-show-photoes {
+        width: 18px;
+        height: 18px;
+    }
+}
+
+@media (min-width: 1566px) {
+    .pts-badge {
+        width: 85px;
+        height: 85px;
+    }
+
+    .icon-with-show-photoes {
+        width: 22px;
+        height: 22px;
+    }
+}

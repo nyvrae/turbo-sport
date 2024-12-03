@@ -3,25 +3,40 @@ import Image from 'next/image';
 
 import Badge from '../../../public/headline_badges/participants_badge.svg';
 
+import PhotoP1 from '../../../public/participants/participant_1st.png';
+import PhotoP2 from '../../../public/participants/participant_2nd.png';
+import PhotoP3 from '../../../public/participants/participant_3rd.png';
+import PhotoP4 from '../../../public/participants/participant_4th.png';
+import PhotoP5 from '../../../public/participants/participant_5th.png';
+
+import './participants.css'
+
 const Participants = () => {
     return (
-        <section className='participants bg-foreground'>
-            <div className="participants__wrapper wrapper">
-                <div className="participants__text text-background">
-                    <h2 className='flex'>
+        <section
+            className='participants bg-foreground'
+            id='participants'
+        >
+            <div
+                id="mem-cont"
+                className="participants__wrapper wrapper"
+            >
+                <div className="participants__text text-background flex flex-col gap-5 lg:gap-8 2xl:gap-12">
+                    <h2 className='flex items-center gap-3.5 lg:gap-5 2xl:gap-10'>
                         <span>
                             <Image
+                                className='pts-badge'
                                 src={Badge}
                                 width={85}
                                 height={85}
                                 alt=''
                             />
                         </span>
-                        <span>
+                        <span className='participants__text-healine text-hl2_fs'>
                             Участники
                         </span>
                     </h2>
-                    <p>
+                    <p className='large_fs'>
                         Экспонатами фестиваля будут
                         являться редкие и яркие автомобили,
                         мотоциклы, внедорожная, водная и
@@ -38,9 +53,70 @@ const Participants = () => {
                         в одной из лучших локаций Москвы.
                     </p>
                 </div>
+                <div className='participants__left-photo participants__first-photo'>
+                    <Image
+                        className='participants__photo'
+                        src={PhotoP2}
+                        width={800}
+                        height={600}
+                        alt=''
+                    />
+                </div>
+                <div className="participants__right-photo participants__second-photo">
+                    <Image
+                        className='participants__photo'
+                        src={PhotoP1}
+                        width={800}
+                        height={600}
+                        alt=''
+                    />
+                </div>
+                <div className="participants__left-photo participants__third-photo">
+                    <Image
+                        className='participants__photo'
+
+                        src={PhotoP4}
+                        width={800}
+                        height={600}
+                        alt=''
+                    />
+                </div>
+                <div className='participants__right-photo participants__fourth-photo'>
+                    <Image
+                        className='participants__photo'
+
+                        src={PhotoP3}
+                        width={800}
+                        height={600}
+                        alt=''
+                    />
+                </div>
+                <div className="participants__right-photo participants__fifth-photo">
+                    <Image
+                        className='participants__photo'
+
+                        src={PhotoP5}
+                        width={800}
+                        height={600}
+                        alt=''
+                    />
+                </div>
+                <div className="watch-photoes bg-blue hover:bg-black cursor-pointer">
+                    <p className='watch-photoes__text flex'>
+                        <span className='text-background text-nowrap text-xs md:text-base xl:text-xl'>
+                            Еще фото
+                        </span>
+                        <span>
+                            <svg className='icon-with-show-photoes' viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M23.9996 2.00015L23.9996 23.9998M23.9996 2.00015L2 23.9998M23.9996 2.00015L2 2.00015" className='stroke-background' strokeWidth="3.6667" />
+                            </svg>
+                        </span>
+                    </p>
+                </div>
             </div>
         </section>
     )
 }
 
 export default Participants
+

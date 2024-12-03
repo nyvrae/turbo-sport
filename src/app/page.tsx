@@ -12,7 +12,7 @@ import './globals.css'
 
 export default function Page() {
     return (
-        <section className='page w-full'>
+        <section className='page w-full flex flex-col items-center'>
             <Header />
             <Banner />
             <Participants />

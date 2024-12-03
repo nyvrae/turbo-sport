@@ -16,14 +16,14 @@
     align-items: center;
 }
 
-.wrapper {
+.banner__wrapper {
     max-width: 1920px;
 
     grid-template-columns: repeat(1, 1fr);
 }
 
 @media (min-width: 768px) {
-    .wrapper {
+    .banner__wrapper {
         grid-template-columns: repeat(2, 1fr);
         grid-template-areas:
             "logo logo"
