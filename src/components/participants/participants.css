@@ -1,17 +1,17 @@
+@import "./common.css";
+
 .participants {
     max-width: 1920px;
 }
 
-.participants__wrapper {
-    max-width: 1920px;
-    padding-top: clamp(30px, 9.375svw, 100px);
-    padding-bottom: clamp(30px, 9.375svw, 100px);
+.participants__text {
+    display: flex;
+    flex-direction: column;
 }
 
 /* Адаптив под фотки и текст */
-
-/* До 1024px через FlexBox */
-@media (max-width: 1024px) {
+/* через FlexBox */
+@media (max-width: 1023px) {
     #mem-cont {
         display: flex;
         flex-wrap: wrap;
@@ -19,10 +19,11 @@
         justify-content: space-between;
     }
 
-
     .participants__text {
         flex-basis: 100%;
         margin-bottom: 10px;
+        display: flex;
+        flex-direction: column;
     }
 
     .participants__photo,
@@ -36,12 +37,6 @@
         width: 41.25svw;
         min-width: 130px;
         aspect-ratio: 132 / 150;
-    }
-
-    .photos {
-        display: flex;
-        justify-content: space-between;
-        width: 100%;
     }
 
     .photos__left,
@@ -65,22 +60,153 @@
     }
 }
 
-/* через GridBox */
-
+/* Адаптив под десктопы */
 @media (min-width: 1024px) {
-
     #mem-cont {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
+        display: flex;
+        flex-direction: column;
+        gap: 80px;
+        position: relative;
     }
 
+    .participants__text,
+    .photos__left {
+        width: 50%;
+    }
+
+
+    .participants__text {
+        width: 41%;
+    }
+
+    .photos__left {
+        gap: 80px;
+    }
+
+    .photos__right {
+        position: absolute;
+        right: 0;
+    }
+
+    .photos__left {
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* Ширина для фоток и контейнера "Еще фото" */
+    .participants__photo--left,
+    .watch-photoes {
+        position: relative;
+        width: clamp(400px, 39.0625svw, 500px);
+    }
+
+    @media (min-width: 1566px) {
+
+        .participants__photo--left,
+        .watch-photoes {
+            position: relative;
+            width: clamp(500px, 33.85svw, 650px);
+        }
+    }
+
+    .photos__right {
+        display: flex;
+        flex-direction: column;
+        gap: 80px;
+        padding-bottom: 100px;
+    }
+
+    @media (min-width: 1566px) {
+        .photos__right {
+            display: flex;
+            flex-direction: column;
+            gap: 130px;
+        }
+    }
+
+    .participants__photo--right {
+        width: clamp(450px, 44svw, 600px);
+    }
+
+    @media (min-width: 1566px) {
+        .participants__photo--right {
+            width: clamp(600px, 39.0625svw, 750px);
+        }
+    }
+
+    /* Настройка "Еще фото" */
+
+    .watch-photoes {
+        position: relative;
+        padding: 30px 30px;
+    }
+
+    .watch-photoes>p {
+        width: 100%;
+        aspect-ratio: 400 / 128;
+        display: flex;
+        justify-content: space-between;
+    }
+
+
+
+    /* Отступы справа для контейнера, 
+    где фотографии должны находиться справа*/
+
+    .photos__right {
+        padding-right: clamp(35px, 4.7svw, 150px);
+    }
+
+    @media (min-width: 1566px) {
+        .photos__right {
+            padding-right: clamp(150px, 9svw, 195px);
+        }
+    }
+
+    /* Вычисление высоты контейнера */
+    @media (min-width: 1350px) {
+        .participants {
+            --height-right-photos: clamp(450px, 44svw, 600px);
+            --gap-right-photos: 80px;
+            --paddings: clamp(100px, 10svw, 200px);
+
+            height: calc(3 * var(--height-right-photos) + 2 * var(--gap-right-photos) + var(--paddings));
+        }
+    }
+
+    @media (min-width: 1566px) {
+        .participants {
+            --height-right-photos: clamp(600px, 39.0625svw, 750px);
+            --gap-right-photos: 130px;
+            --paddings: clamp(100px, 10svw, 200px);
+
+            height: calc(3 * var(--height-right-photos) + 2 * var(--gap-right-photos) + var(--paddings));
+        }
+    }
+}
+
+
+
+@media (min-width: 1566px) {
+    .watch-photoes {
+        padding: 40px 40px;
+    }
 }
 
 /* Паддинги сверху и снизу */
 @media (min-width: 1024px) {
 
     .participants__wrapper {
+        max-width: 1920px;
         padding-top: clamp(100px, 10svw, 200px);
         padding-bottom: clamp(100px, 10svw, 200px);
+    }
+}
+
+@media (max-width: 1024) {
+    .participants__wrapper {
+        padding-top: clamp(30px, 9.375svw, 100px);
+        padding-bottom: clamp(30px, 9.375svw, 100px);
     }
 }
 
@@ -106,70 +232,5 @@
     .participants,
     .participants__photo {
         border-radius: 50px;
-    }
-}
-
-
-/* Доп классы */
-.large_fs {
-    line-height: 150%;
-    font-size: 16px;
-}
-
-@media (max-width: 1024px) {
-    .large_fs {
-        font-size: 15px;
-
-    }
-}
-
-@media (max-width: 768px) {
-    .large_fs {
-        font-size: 14px;
-    }
-}
-
-/* Общие стили */
-.pts-badge {
-    width: 50px;
-    height: 50px;
-}
-
-.icon-with-show-photoes {
-    width: 10px;
-    height: 10px;
-}
-
-
-
-@media (min-width: 640px) {
-    .icon-with-show-photoes {
-        width: 14px;
-        height: 14px;
-    }
-}
-
-
-@media (min-width: 1024px) {
-    .pts-badge {
-        width: 60px;
-        height: 60px;
-    }
-
-    .icon-with-show-photoes {
-        width: 18px;
-        height: 18px;
-    }
-}
-
-@media (min-width: 1566px) {
-    .pts-badge {
-        width: 85px;
-        height: 85px;
-    }
-
-    .icon-with-show-photoes {
-        width: 22px;
-        height: 22px;
     }
 }

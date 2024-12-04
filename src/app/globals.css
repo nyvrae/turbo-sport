@@ -89,21 +89,21 @@ body .wrapper {
 
 @layer utilities {
     .wrapper {
-        padding-left: clamp(18px, 5svw, 35px);
-        padding-right: clamp(18px, 5svw, 35px);
+        padding-left: clamp(18px, 5.625svw, 35px);
+        padding-right: clamp(18px, 5.625svw, 35px);
     }
 
     @media (min-width: 1024px) {
         .wrapper {
-            padding-left: clamp(35px, 7.5svw, 150px);
-            padding-right: clamp(35px, 7.5svw, 150px);
+            padding-left: clamp(35px, 4.7svw, 150px);
+            padding-right: clamp(35px, 4.7svw, 150px);
         }
     }
 
     @media (min-width: 1566px) {
         .wrapper {
-            padding-left: clamp(150px, 10svw, 195px);
-            padding-right: clamp(150px, 10svw, 195px);
+            padding-left: clamp(150px, 9svw, 195px);
+            padding-right: clamp(150px, 9svw, 195px);
         }
     }
 }
