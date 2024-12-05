@@ -4,7 +4,12 @@
 
 # Стек
 
-1. Next.js
-2. Typescript
-3. Tailwind.css
-4. Sentry
+### Next.js
+
+### Typescript
+
+### Tailwind.css
+
+### Sentry
+
+### Jest
