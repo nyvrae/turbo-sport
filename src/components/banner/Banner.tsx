@@ -114,7 +114,7 @@ const Banner = () => {
                     <h1 className='banner__wrapper__headline text-hl1_fs font-medium'>
                         Автовыходные <br />
                         на Гребном канале</h1>
-                    <button className='banner__wrapper__buy-ticket btn_buy_ticket bg-blue stroke-white text-white hover:text-black hover:bg-green hover:stroke-black'>
+                    <button className='banner__wrapper__buy-ticket btn_buy_ticket bg-blue stroke-white text-white hover:text-black hover:bg-green hover:stroke-black' role='button'>
                         <span className='button_fs font-medium'>Купить билет</span>
                         <span>
                             <svg width="28" height="15" viewBox="0 0 28 15" xmlns="http://www.w3.org/2000/svg">

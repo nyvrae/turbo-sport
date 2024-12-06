@@ -11,6 +11,7 @@ const VideoComponent: React.FC = () => {
                 muted
                 autoPlay
                 loop
+                data-testid="video"
             />
         </div>
     );
