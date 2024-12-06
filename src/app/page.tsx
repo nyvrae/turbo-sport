@@ -16,6 +16,7 @@ export default function Page() {
             <Header />
             <Banner />
             <Participants />
+
             <Activities />
             <Schedule />
             <Tickets />

@@ -9,7 +9,7 @@ const Banner = () => {
         <section className='banner w-full'>
             <div className="banner__wrapper wrapper">
                 <div className="banner__wrapper__image">
-                    <svg width="152" height="27" viewBox="0 0 152 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg width="152" height="27" viewBox="0 0 152 27" fill="none" xmlns="http://www.w3.org/2000/svg" data-testid="banner">
                         <g clipPath="url(#clip0_341_1740)">
                             <path
                                 d="M35.5946 25.1062C35.5946 26.1477 34.7425 26.9994 33.7032 26.9994H1.88873C0.847453 26.9994 -0.00195312 26.1477 -0.00195312 25.1062V1.89207C-0.00195312 0.851199 0.847453 -0.000488281 1.88873 -0.000488281H33.7032C34.7425 -0.000488281 35.5946 0.851199 35.5946 1.89207V25.1062Z"

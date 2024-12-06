@@ -16,7 +16,7 @@ const Header = () => {
 
     return (
         <>
-            <header className='header w-full text-foreground z-0'>
+            <header className='header w-full text-foreground z-0' data-testid="header">
                 <div className="header__wrapper wrapper w-full">
                     <div className="header__wrapper__block">
                         <svg className="header__wrapper__logo" width="159" height="38" viewBox="0 0 159 38" fill="none" xmlns="http://www.w3.org/2000/svg">

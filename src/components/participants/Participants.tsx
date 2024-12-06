@@ -16,6 +16,7 @@ const Participants = () => {
         <section
             className='participants bg-foreground'
             id='participants'
+            data-testid="participants"
         >
             <div
                 id="mem-cont"
