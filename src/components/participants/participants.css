@@ -1,4 +1,4 @@
-@import "./common.css";
+@import "../common.css";
 
 .participants {
     max-width: 1920px;
@@ -203,7 +203,7 @@
     }
 }
 
-@media (max-width: 1024) {
+@media (max-width: 1024px) {
     .participants__wrapper {
         padding-top: clamp(30px, 9.375svw, 100px);
         padding-bottom: clamp(30px, 9.375svw, 100px);
