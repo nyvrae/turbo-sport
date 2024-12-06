@@ -7,7 +7,7 @@ import VideoComponent from '@/ui/video/VideoComponent'
 const Banner = () => {
     return (
         <section className='banner w-full'>
-            <div className="banner__wrapper wrapper">
+            <div className="banner__wrapper wrapper text-foreground">
                 <div className="banner__wrapper__image">
                     <svg width="152" height="27" viewBox="0 0 152 27" fill="none" xmlns="http://www.w3.org/2000/svg" data-testid="banner">
                         <g clipPath="url(#clip0_341_1740)">
