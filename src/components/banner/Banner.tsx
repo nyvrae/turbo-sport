@@ -111,11 +111,11 @@ const Banner = () => {
                     </svg>
                 </div>
                 <div className="main_head_and_btn positioning__main-atributes grid rowgap">
-                    <h1 className='banner__wrapper__headline text-hl1_fs font-medium'>
+                    <h1 className='banner__wrapper__headline text-hl1_fs font-medium overflow-hidden'>
                         Автовыходные <br />
                         на Гребном канале</h1>
-                    <button className='banner__wrapper__buy-ticket btn_buy_ticket bg-blue stroke-white text-white hover:text-black hover:bg-green hover:stroke-black' role='button'>
-                        <span className='button_fs font-medium'>Купить билет</span>
+                    <button className='banner__wrapper__buy-ticket btn_buy_ticket bg-blue stroke-[#ffffff] text-white hover:text-black hover:bg-green hover:stroke-black' role='button'>
+                        <span className='button_fs font-medium text-[#ffffff]'>Купить билет</span>
                         <span>
                             <svg width="28" height="15" viewBox="0 0 28 15" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M0 7.5H26M26 7.5L20 1.5M26 7.5L20 13.5" strokeWidth="2" />
@@ -127,7 +127,7 @@ const Banner = () => {
                     <VideoComponent />
                 </div>
 
-                <p className='lower-headings-first text-hl2_fs font-medium text-nowrap'>
+                <p className='lower-headings-first text-hl2_fs font-medium text-nowrap overflow-hidden'>
                     Выходные <br />
                     в атмосфере <br />
                     драйва и веселья

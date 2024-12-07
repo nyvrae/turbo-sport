@@ -1,0 +1,62 @@
+@import "../common.css";
+
+.tickets__cards {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.tickets__cards::-webkit-scrollbar {
+    display: none;
+}
+
+.ticket-card {
+    min-width: 270px;
+    width: 270px;
+    height: 460px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    border: 2px var(--foreground) solid;
+    border-radius: 40px;
+
+    flex-shrink: 0;
+    margin-top: 2px;
+    margin-bottom: 3px;
+}
+
+@media (min-width: 1024px) {
+    .ticket-card {
+        width: 300px;
+    }
+}
+
+
+@media (min-width: 1566px) {
+    .ticket-card {
+        width: 360px;
+    }
+}
+
+.__wrapper {
+    padding-left: clamp(18px, 5.625svw, 35px);
+    padding-right: clamp(18px, 5.625svw, 35px);
+}
+
+@media (min-width: 1024px) {
+    .__wrapper {
+        padding-left: clamp(35px, 4.7svw, 150px);
+        padding-right: clamp(35px, 4.7svw, 150px);
+    }
+}
+
+@media (min-width: 1566px) {
+    .__wrapper {
+        padding-left: clamp(150px, 9svw, 195px);
+        padding-right: clamp(150px, 9svw, 195px);
+    }
+}

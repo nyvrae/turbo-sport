@@ -26,7 +26,7 @@ const Schedule = () => {
                         return (
                             <div key={i}>
                                 <div className='flex flex-wrap max-md:flex-col gap-6 max-md:gap-0 text-descriptor_fs'>
-                                    <div className="points__contain-time w-40">
+                                    <div className="points__contain-time 2xl:w-[300px] lg:w-[200px] w-[150px]">
                                         <p className="points__time__item flex text-dark_grey">
                                             {event.time}
                                         </p>
@@ -63,7 +63,7 @@ const Schedule = () => {
                             alt=''
                         />
                     </span>
-                    <span className="text-hl2_fs">Расписание</span>
+                    <span className="text-hl2_fs overflow-hidden">Расписание</span>
                 </h2>
 
                 <div className="choose-info-activity text-foreground">

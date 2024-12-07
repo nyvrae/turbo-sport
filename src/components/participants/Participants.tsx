@@ -33,7 +33,7 @@ const Participants = () => {
                                 alt=''
                             />
                         </span>
-                        <span className='participants__text-healine text-hl2_fs'>
+                        <span className='participants__text-healine text-hl2_fs overflow-hidden'>
                             Участники
                         </span>
                     </h2>
@@ -79,12 +79,12 @@ const Participants = () => {
 
                     <div className="watch-photoes bg-blue hover:bg-black cursor-pointer">
                         <p className='watch-photoes__text'>
-                            <span className='text-foreground text-nowrap text-xs md:text-base xl:text-xl'>
+                            <span className='text-[#fff] text-nowrap text-xs md:text-base xl:text-xl'>
                                 Еще фото
                             </span>
                             <span>
                                 <svg className='icon-with-show-photoes' viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M23.9996 2.00015L23.9996 23.9998M23.9996 2.00015L2 23.9998M23.9996 2.00015L2 2.00015" className='stroke-foreground' strokeWidth="3.6667" />
+                                    <path d="M23.9996 2.00015L23.9996 23.9998M23.9996 2.00015L2 23.9998M23.9996 2.00015L2 2.00015" className='stroke-[#fff]' strokeWidth="3.6667" />
                                 </svg>
                             </span>
                         </p>

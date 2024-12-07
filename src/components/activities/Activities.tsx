@@ -38,7 +38,7 @@ const Activities = () => {
                     <span>
                         <Image className='pts-badge' src={Badge} height={85} width={85} alt="Участники" />
                     </span>
-                    <span className="text-hl2_fs">Активности</span>
+                    <span className="text-hl2_fs overflow-hidden">Активности</span>
                 </h2>
 
                 <div className="choose-info-activity text-tags_fs">
