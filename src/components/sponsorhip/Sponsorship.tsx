@@ -10,7 +10,7 @@ import './sponsorship.css';
 const Sponsorship = () => {
     return (
         <section className="sponsorship w-full flex flex-col">
-            <div className="sponsorship__wrapper bg-background text-black special-pt md:mb-[60px]">
+            <div className="sponsorship__wrapper bg-background text-black special-pt md:mb-[60px] overflow-hidden">
                 <div className='wrapper overflow-hidden'>
                     <h2 className='flex items-center gap-3.5 lg:gap-5 2xl:gap-10'>
                         <span>
@@ -33,8 +33,8 @@ const Sponsorship = () => {
                 <div className='special-pt'></div>
 
                 <div className="box md:rounded-[40px] special__wrapper 2xl:rounded-[50px] bg-blue text-white md:p-[50px] 2xl:py-[80px] 2xl:px-[100px] max-md:py-[40px]
-                max-md:rounded-t-[30px] max-md:rounded-t-[30px]">
-                    <div className='box__wrapper w-full flex flex-col md:gap-[160px] max-md:wrapper'>
+                max-md:rounded-t-[30px] max-md:rounded-t-[30px] overflow-hidden">
+                    <div className='box__wrapper w-full flex flex-col md:gap-[160px] max-md:wrapper overflow-hidden'>
                         <h2 className='flex flex-col md:gap-[15px]'>
                             <span className='text-hl2_fs overflow-hidden 2xl:order-last'>info@lastochka-car.ru</span>
                             <span className='large_fs 2xl:order-first'>По всем вопросам</span>
