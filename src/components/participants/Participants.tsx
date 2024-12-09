@@ -14,7 +14,7 @@ import './participants.css'
 const Participants = () => {
     return (
         <section
-            className='participants bg-foreground'
+            className='participants bg-foreground overflow-hidden'
             id='participants'
             data-testid="participants"
         >
