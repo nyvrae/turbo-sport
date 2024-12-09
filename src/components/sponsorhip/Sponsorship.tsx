@@ -10,8 +10,8 @@ import './sponsorship.css';
 const Sponsorship = () => {
     return (
         <section className="sponsorship w-full flex flex-col">
-            <div className="sponsorship__wrapper bg-background text-black special-pt md:mb-[60px] overflow-hidden">
-                <div className='wrapper overflow-hidden'>
+            <div className="sponsorship__wrapper bg-background text-black special-pt md:mb-[60px]">
+                <div className='wrapper'>
                     <h2 className='flex items-center gap-3.5 lg:gap-5 2xl:gap-10'>
                         <span>
                             <Image
@@ -33,7 +33,7 @@ const Sponsorship = () => {
                 <div className='special-pt'></div>
 
                 <div className="box md:rounded-[40px] special__wrapper 2xl:rounded-[50px] bg-blue text-white md:p-[50px] 2xl:py-[80px] 2xl:px-[100px] max-md:py-[40px]
-                max-md:rounded-t-[30px] max-md:rounded-t-[30px] overflow-hidden">
+                max-md:rounded-t-[30px] max-md:rounded-t-[30px]">
                     <div className='box__wrapper w-full flex flex-col md:gap-[160px] max-md:wrapper overflow-hidden'>
                         <h2 className='flex flex-col md:gap-[15px]'>
                             <span className='text-hl2_fs overflow-hidden 2xl:order-last'>info@lastochka-car.ru</span>
@@ -140,7 +140,7 @@ const Sponsorship = () => {
                                             <path
                                                 d="M80.9115 23.5996L79.5158 20.1293L78.1195 23.5996H80.9115ZM81.1334 24.1515H77.8955L77.1977 25.8788H76.5586L79.2154 19.417H79.8238L82.4812 25.8788H81.8326L81.1334 24.1515Z"
                                                 className='fill-[#e7e7e9]' />
-                                        </g>yar
+                                        </g>
                                     </svg>
                                 </div>
                                 <div className="header__wrapper__block">

@@ -2,12 +2,10 @@
 
 .sponsorship {
     max-width: 1920px;
-    overflow: hidden;
 }
 
 .sponsorship__wrapper {
     max-width: 1920px;
-    position: relative;
 }
 
 @media (max-width: 767px) {
@@ -17,6 +15,12 @@
         width: 100svw;
         height: auto;
         left: 0;
+    }
+
+    .box__wrapper {
+        position: relative;
+        width: 100%;
+        height: auto;
     }
 }
 

@@ -9,48 +9,9 @@ import SecurityBadge from '../../../public/icons/security.svg'
 
 import Marq from './ticket-parts/Marq';
 
-import { loadStripe } from '@stripe/stripe-js';
-
-const stripePromise = loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY || '');
-
 import './tickets.css'
 
 const Tickets = () => {
-    useEffect(() => {
-        const button = document.getElementById('checkout-button');
-        if (button) {
-            button.addEventListener('click', async () => {
-                const stripe = await stripePromise;
-
-                // Создаем сессию оплаты через API-роут
-                const response = await fetch('/api/checkout', {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({
-                        items: [
-                            { name: 'Тестовый продукт', price: 10, quantity: 1 },
-                            { name: 'Другой продукт', price: 20, quantity: 2 },
-                        ],
-                    }),
-                });
-
-                if (!response.ok) {
-                    console.error('Ошибка при создании сессии оплаты');
-                    return;
-                }
-
-                const { id } = await response.json();
-
-                // Редирект на Stripe Checkout
-                const result = await stripe?.redirectToCheckout({ sessionId: id });
-                if (result?.error) {
-                    console.error(result.error.message);
-                }
-            });
-        }
-    }, []);
-
-
     return (
         <section
             className="tickets w-full special-pt"
