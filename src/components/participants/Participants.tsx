@@ -20,7 +20,7 @@ const Participants = () => {
         >
             <div
                 id="mem-cont"
-                className="participants__wrapper wrapper"
+                className="participants__wrapper wrapper overflow-hidden"
             >
                 <div className="participants__text text-background gap-5 lg:gap-8 2xl:gap-12">
                     <h2 className='flex items-center gap-3.5 lg:gap-5 2xl:gap-10'>
