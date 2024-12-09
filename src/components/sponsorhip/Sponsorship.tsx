@@ -11,7 +11,7 @@ const Sponsorship = () => {
     return (
         <section className="sponsorship w-full flex flex-col">
             <div className="sponsorship__wrapper bg-background text-black special-pt md:mb-[60px]">
-                <div className='wrapper'>
+                <div className='wrapper overflow-hidden'>
                     <h2 className='flex items-center gap-3.5 lg:gap-5 2xl:gap-10'>
                         <span>
                             <Image
