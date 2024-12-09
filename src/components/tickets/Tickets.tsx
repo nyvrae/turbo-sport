@@ -1,4 +1,6 @@
-import React from 'react'
+'use client'
+
+import React, { useEffect } from 'react'
 import Image from 'next/image';
 
 import BuyTicketBtn from '@/ui/BuyTicketBtn';
@@ -7,12 +9,56 @@ import SecurityBadge from '../../../public/icons/security.svg'
 
 import Marq from './ticket-parts/Marq';
 
+import { loadStripe } from '@stripe/stripe-js';
+
+const stripePromise = loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY || '');
+
 import './tickets.css'
 
 const Tickets = () => {
+    useEffect(() => {
+        const button = document.getElementById('checkout-button');
+        if (button) {
+            button.addEventListener('click', async () => {
+                const stripe = await stripePromise;
+
+                // Создаем сессию оплаты через API-роут
+                const response = await fetch('/api/checkout', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        items: [
+                            { name: 'Тестовый продукт', price: 10, quantity: 1 },
+                            { name: 'Другой продукт', price: 20, quantity: 2 },
+                        ],
+                    }),
+                });
+
+                if (!response.ok) {
+                    console.error('Ошибка при создании сессии оплаты');
+                    return;
+                }
+
+                const { id } = await response.json();
+
+                // Редирект на Stripe Checkout
+                const result = await stripe?.redirectToCheckout({ sessionId: id });
+                if (result?.error) {
+                    console.error(result.error.message);
+                }
+            });
+        }
+    }, []);
+
+
     return (
-        <section className="tickets w-full special-pt">
-            <div className="tickets__wrapper relative w-[100svw]">
+        <section
+            className="tickets w-full special-pt"
+        >
+            <div
+                id='tickets'
+                className="tickets__wrapper relative w-[100svw]"
+            >
                 <Marq />
             </div>
 
@@ -136,7 +182,7 @@ const Tickets = () => {
                             </div>
                         </div>
                         <div className='flex flex-col gap-[20px] mt-[27px] overflow-hidden'>
-                            <p className='text-nowrap text-white font-bold overflow-hidden'>900 ₽</p>
+                            <p className='text-nowrap text-white font-bold overflow-hidden'>25 000 ₽</p>
                             <BuyTicketBtn className="" text="купить билет" />
                         </div>
                     </div>
@@ -181,3 +227,4 @@ const Tickets = () => {
 }
 
 export default Tickets
+

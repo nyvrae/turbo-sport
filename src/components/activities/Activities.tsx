@@ -33,7 +33,10 @@ const Activities = () => {
 
     return (
         <section className="activities w-full special-pt">
-            <div className="activities__wrapper wrapper">
+            <div
+                id="activities"
+                className="activities__wrapper wrapper"
+            >
                 <h2 className="activities__wrapper__headline font-bold flex items-center gap-3.5 lg:gap-5 2xl:gap-10">
                     <span>
                         <Image className='pts-badge' src={Badge} height={85} width={85} alt="Участники" />

@@ -52,7 +52,10 @@ const Schedule = () => {
 
     return (
         <section className="schedule w-full special-pt">
-            <div className="schedule__wrapper wrapper">
+            <div
+                id="schedule"
+                className="schedule__wrapper wrapper"
+            >
                 <h2 className="schedule__wrapper__headline text-foreground font-bold flex items-center gap-3.5 lg:gap-5 2xl:gap-10">
                     <span>
                         <Image

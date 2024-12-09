@@ -1,0 +1,41 @@
+@import "../common.css";
+
+.sponsorship {
+    max-width: 1920px;
+}
+
+.sponsorship__wrapper {
+    max-width: 1920px;
+    position: relative;
+}
+
+@media (max-width: 767px) {
+    .box {
+        position: absolute;
+        width: 100%;
+        width: 100svw;
+        height: auto;
+        left: 0;
+    }
+}
+
+@media (min-width: 768px) {
+    .special__wrapper {
+        margin-left: clamp(18px, 5.625svw, 35px);
+        margin-right: clamp(18px, 5.625svw, 35px);
+    }
+}
+
+@media (min-width: 1024px) {
+    .special__wrapper {
+        margin-left: clamp(35px, 4.7svw, 150px);
+        margin-right: clamp(35px, 4.7svw, 150px);
+    }
+}
+
+@media (min-width: 1566px) {
+    .special__wrapper {
+        margin-left: clamp(150px, 9svw, 195px);
+        margin-right: clamp(150px, 9svw, 195px);
+    }
+}

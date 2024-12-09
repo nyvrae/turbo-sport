@@ -1,0 +1,35 @@
+@import "../common.css";
+
+.map-image {
+    width: 100%;
+    height: auto;
+}
+
+.location {
+    max-width: 1920px;
+}
+
+@media (min-width: 768px) {
+    .map-image {
+        width: clamp(300px, 39svw, 500px);
+    }
+}
+
+@media (min-width: 1200px) {
+    .map-image {
+        width: clamp(500px, 32svw, 600px);
+    }
+}
+
+.location__wrapper {
+    max-width: 1920px;
+    padding-top: clamp(100px, 10svw, 200px);
+    padding-bottom: clamp(100px, 10svw, 200px);
+}
+
+@media (max-width: 1024px) {
+    .location__wrapper {
+        padding-top: clamp(30px, 9.375svw, 100px);
+        padding-bottom: clamp(30px, 9.375svw, 100px);
+    }
+}

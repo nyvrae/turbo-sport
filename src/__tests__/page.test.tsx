@@ -9,11 +9,11 @@ describe('Page', () => {
     expect(screen.getByTestId('header')).toBeInTheDocument();
     expect(screen.getByTestId('banner')).toBeInTheDocument();
     expect(screen.getByTestId('participants')).toBeInTheDocument();
-    // expect(screen.getByTestId('activities')).toBeInTheDocument();
-    // expect(screen.getByTestId('schedule')).toBeInTheDocument();
-    // expect(screen.getByTestId('tickets')).toBeInTheDocument();
-    // expect(screen.getByTestId('location')).toBeInTheDocument();
-    // expect(screen.getByTestId('sponsorship')).toBeInTheDocument();
+    expect(screen.getByTestId('activities')).toBeInTheDocument();
+    expect(screen.getByTestId('schedule')).toBeInTheDocument();
+    expect(screen.getByTestId('tickets')).toBeInTheDocument();
+    expect(screen.getByTestId('location')).toBeInTheDocument();
+    expect(screen.getByTestId('sponsorship')).toBeInTheDocument();
   })
 });
 

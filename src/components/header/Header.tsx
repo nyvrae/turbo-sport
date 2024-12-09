@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 
 import headerButtons from '@/data/headerButton';
@@ -11,7 +11,7 @@ const Header = () => {
     const [isOpen, setIsOpen] = useState(false);
 
     const toggleMenu = () => {
-        setIsOpen(!isOpen);
+        setIsOpen(isOpen => !isOpen);
     }
 
     return (
@@ -85,7 +85,7 @@ const Header = () => {
                 </div>
             </header >
             {isOpen && (
-                <div className={`fullscreen__menu menu__nav ${isOpen ? 'block' : 'hidden'} absolute top-0 left-0 bg-background text-foregorund w-full h-full z-2`}>
+                <div className={`fullscreen__menu menu__nav ${isOpen ? 'block' : 'hidden'} fixed top-0 left-0 bg-background text-foregorund w-full h-full z-50`}>
                     {/* Кнопка закрытия */}
                     <button
                         title='close menu'
